@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metal Waste</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .icon {
+            width: 100px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .icon:hover {
+            transform: scale(1.1);
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .popup-content {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+            animation: slideDown 0.5s ease-in-out;
+            display: none;
+        }
+        .popup ul {
+            list-style: none;
+            padding: 0;
+        }
+        .popup li {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 18px;
+            margin: 10px 0;
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .popup img {
+            width: 50px;
+            border-radius: 5px;
+        }
+        .close-btn {
+            cursor: pointer;
+            color: red;
+            font-size: 24px;
+            font-weight: bold;
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            transition: transform 0.3s;
+        }
+        .close-btn:hover {
+            transform: scale(1.2);
+        }
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Click the Icon to See Metal Waste Items</h2>
+    <img src="images/metal waste/metal-waste.png" alt="Metal Waste Icon" class="icon" onclick="showPopup()">
+    
+    <div class="popup" id="popup">
+        <div class="popup-content" id="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h3>Metal Waste Items</h3>
+            <ul>
+                <li><img src="images/metal waste/aluminium.jpg" alt="Aluminium Cans"> Aluminum Cans</li>
+                <li><img src="images/metal waste/iron-scrap.jpg" alt="Iron Scrap"> Iron Scrap</li>
+                <li><img src="images/metal waste/copper-wires.jpg" alt="Copper Wires"> Copper Wires</li>
+                <li><img src="images/metal waste/stainless-steel.jpg" alt="Stainless Steel Items"> Stainless Steel Items</li>
+                <li><img src="images/metal waste/old-pipes.jpg" alt="Old Metal Pipes"> Old Metal Pipes</li>
+                <li><img src="images/metal waste/rusted-nails.jpg" alt="Rusted Nails"> Rusted Nails</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function showPopup() {
+            let popup = document.getElementById('popup');
+            let popupContent = document.getElementById('popup-content');
+            popup.style.display = 'flex';
+            setTimeout(() => {
+                popup.style.opacity = '1';
+                popupContent.style.display = 'block';
+            }, 50);
+        }
+        function closePopup() {
+            let popup = document.getElementById('popup');
+            let popupContent = document.getElementById('popup-content');
+            popup.style.opacity = '0';
+            popupContent.style.display = 'none';
+            setTimeout(() => popup.style.display = 'none', 500);
+        }
+    </script>
+</body>
+</html>

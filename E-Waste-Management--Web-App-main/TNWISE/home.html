@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="home">
+    <div class="header">
+        <div class="logo-container">
+            <img src="images/Home page/WhatsApp Image 2025-03-12 at 1.44.19 PM.jpeg" alt="Logo">
+            <span class="logo-text">DigiScrap Recycle</span>
+        </div>
+        
+
+        <nav class="hover">
+            <ul>
+                <li><a href="home.html"> Home</a></li>
+                <li><a href="about-us.html"> About Us</a></li>
+                <li><a href="memorabilia.html"> Memorabilia</a></li>
+                <li><a href="upload.html"> Upload</a></li>
+                <li><a href="sustainability.html"> Sustainability</a></li>
+                <li><a href="payment.html"> Payment</a></li>
+                <li><a href="contact.html"> Contact</a></li>
+                
+            </ul>
+        </nav>
+    </div>
+
+    <div class="home-container">
+        <div class="waste-option">
+            <img src="images/Home page/E-waste.png" alt="E-Waste">
+            <p>E-Waste</p>
+        </div>
+    
+        <div class="waste-option" id="medical-waste">
+            <img src="images/Home page/med-waste.png" alt="Medical Waste">
+            <p>Medical Waste</p>
+        </div>
+        
+        
+        <div class="waste-option" id="data-waste">
+            <img src="images/Home page/data-waste.png" alt="Data Waste">
+            <p>Data Waste</p>
+        </div>
+        
+        
+        <div class="waste-option" id="metal-waste">
+            <img src="images/Home page/metal-waste.png" alt="Metal Waste">
+            <p>Metal Waste</p>
+        </div>
+        
+    </div>
+    <div class="what-we-do">
+        <h2>E-Waste Recycling Company</h2>
+        <p>
+            DigiScrap Recycle makes e-waste disposal sustainable and cleans electronic garbage across the country 
+            by innovating new technologies, making it easy for people to recycle their electronics, 
+            and collaborating with various stakeholders such as manufacturers, collectors, recyclers, 
+            and users, defining the importance of electronic waste. 
+        </p>
+        <p>
+            We have created a comprehensive e-waste management process from beginning to end 
+            that successfully ensures the collection, transportation, reuse, and recycling of 
+            e-waste products in order to fulfill our commitment and mission to improve the environment.
+            We are committed to using our expertise, resources and experience to build a sustainable future for the planet. We believe that eWaste is one of the most important issues to tackle in order to protect our environment and our way of life. We have reached a point where we have become aware of the damage caused by electronic recycling and are committed to making a difference with DigiScrap Recycle.
+
+
+
+        </p>
+    </div>
+    
+    
+    
+
+    <script>
+        // Redirect to login page if user is not authenticated
+        if (!localStorage.getItem("isLoggedIn")) {
+            window.location.href = "index.html";
+        }
+    </script>
+    <!-- Other content above -->
+<script>
+    document.querySelector(".waste-option:first-child").addEventListener("click", function() {
+        window.location.href = "e-waste.html";
+    });
+</script>
+<script>
+document.getElementById("medical-waste").addEventListener("click", function() {
+    window.location.href = "medicalwaste.html";
+});
+</script>
+<script>
+document.getElementById("data-waste").addEventListener("click", function() {
+    window.location.href = "datawaste.html";
+});
+</script>
+<script>
+document.getElementById("metal-waste").addEventListener("click", function() {
+        window.location.href = "metal.html";
+    });
+</script>
+</body>
+</html>
+
+

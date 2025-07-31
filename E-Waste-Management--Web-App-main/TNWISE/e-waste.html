@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Waste Categories</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Click the E-Waste Icon to View Categories</h2>
+    <img src="images/Home page/E-waste.png" alt="E-Waste Icon" onclick="showEWaste()">
+
+    <div class="ewaste-list" id="ewasteList">
+        <h3>Types of E-Waste</h3>
+        <ul>
+            <li>Old Mobile Phones</li>
+            <li>Damaged Laptops & Computers</li>
+            <li>Used Batteries</li>
+            <li>Defective Televisions</li>
+            <li>Worn-out Refrigerators</li>
+            <li>Broken Circuit Boards</li>
+        </ul>
+        <div class="ewaste-images">
+            <img src="images/E-waste/ewaste1.png" alt="E-Waste Item">
+            <img src="images/E-waste/ewaste2.jpg" alt="E-Waste Item">
+            <img src="images/E-waste/ewaste3.jpg" alt="E-Waste Item">
+            <img src="images/E-waste/ewaste4.jpg" alt="E-Waste Item">
+            <img src="images/E-waste/ewaste5.jpg" alt="E-Waste Item">
+            <img src="images/E-waste/ewaste6.jpg" alt="E-Waste Item">
+        </div>
+        <button class="close-btn" onclick="hideEWaste()">Close</button>
+    </div>
+    
+    <script>
+        function showEWaste() {
+            let list = document.getElementById("ewasteList");
+            list.style.display = "block";
+            setTimeout(() => {
+                list.style.opacity = "1";
+            }, 10);
+        }
+        function hideEWaste() {
+            let list = document.getElementById("ewasteList");
+            list.style.opacity = "0";
+            setTimeout(() => {
+                list.style.display = "none";
+            }, 500);
+        }
+    </script>
+</body>
+</html>
